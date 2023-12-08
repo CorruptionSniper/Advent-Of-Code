@@ -47,4 +47,4 @@ class DocumentParser():
                 size -= 1
         return size
 
-print(DocumentParser("Advent Of Code\\2023\\D1\\D1.txt").getCalibrationSum())
+print(DocumentParser(r"2023\D1\D1.txt").getCalibrationSum())

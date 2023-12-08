@@ -50,7 +50,5 @@ class PossibleGames():
                 return False
         return True
 
-games = GameRecordParser("Advent Of Code\\2023\\D2\\D2.txt").getGames()
-#print(games)
-#print(PossibleGames(games,[12,13,14]).isPossible([11, 15, 14]))
+games = GameRecordParser(r"2023\D2\D2.txt").getGames()
 print(sum(PossibleGames(games,[12,13,14]).getPossibleGames()))

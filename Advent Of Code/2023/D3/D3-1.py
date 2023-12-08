@@ -61,5 +61,5 @@ class EnginePartGetter():
         return False
 
 
-elements, symbols = EngineSchematicParser("Advent Of Code\\2023\\D3\\D3.txt").getElements()
+elements, symbols = EngineSchematicParser(r"2023\D3\D3.txt").getElements()
 print(sum(EnginePartGetter(elements, symbols).getPartNumbers()))

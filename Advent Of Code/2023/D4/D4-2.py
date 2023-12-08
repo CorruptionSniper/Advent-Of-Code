@@ -34,5 +34,5 @@ class ScracthCardGame():
     def getScore(self):
         return sum([len(wins) and 1<<(len(wins)-1) for cardID, wins in self.getWinningNumbers()])
 
-cards = ScratchCardParser("Advent Of Code\\2023\\D4\\D4.txt").getCards()
+cards = ScratchCardParser(r"2023\D4\D4.txt").getCards()
 print(ScracthCardGame(cards).processCards())

@@ -43,7 +43,7 @@ class SeedMapper():
             return seed - seedMap[LB_PREV] + seedMap[LB]
         return seed
 
-p = MapParser('Advent Of Code\\2023\\D5\\D5.txt')
+p = MapParser(r"2023\D5\D5.txt")
 seeds = p.getSeeds()
 mappings = p.getMappings()
 print(min(SeedMapper(seeds, mappings).getMappedSeeds()))

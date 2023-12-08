@@ -68,5 +68,5 @@ class EnginePartGetter():
         return False
 
 
-elements, gears = EngineSchematicParser("Advent Of Code\\2023\\D3\\D3.txt").getElements()
+elements, gears = EngineSchematicParser(r"2023\D3\D3.txt").getElements()
 print(EnginePartGetter(elements, gears).getGearRatio())

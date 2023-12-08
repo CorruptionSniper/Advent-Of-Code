@@ -42,5 +42,5 @@ class RaceMargins():
         solutions = getSolutions(1, -race[T], race[S])
         return floor(solutions[1] - INFINITESIMAL) - ceil(solutions[0] + INFINITESIMAL) + 1
 
-races = RaceInfoParser(r"Advent Of Code\2023\D6\D6.txt").getRaceInfo()
+races = RaceInfoParser(r"2023\D6\D6.txt").getRaceInfo()
 print(RaceMargins(races).getRaceMargins())

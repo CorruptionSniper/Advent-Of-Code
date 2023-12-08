@@ -22,4 +22,4 @@ class DocumentParser():
             if 48 <= ord(i) < 58:
                 return DIGITS.index(i)
 
-print(DocumentParser("Advent Of Code\\2023\\D1\\D1.txt").getCalibrationSum())
+print(DocumentParser(r"2023\D1\D1.txt").getCalibrationSum())

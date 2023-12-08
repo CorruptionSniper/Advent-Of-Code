@@ -69,7 +69,7 @@ class SeedMapper():
         include[R] = bounds[X2] > bounds[R]
         return sorted([bounds[i] for i in range(4) if include[i]])
 
-p = MapParser('Advent Of Code\\2023\\D5\\D5.txt')
+p = MapParser(r"2023\D5\D5.txt")
 seedRanges = p.getSeedRanges()
 mappings = p.getMappings()
 r = SeedMapper(seedRanges, mappings).getMappedRanges()
