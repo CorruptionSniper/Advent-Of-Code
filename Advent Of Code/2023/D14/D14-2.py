@@ -61,18 +61,15 @@ class TerrainLoadAnalyser():
         self.Terraformer = Terraformer(self.terrain)
 
     def getCycle(self, cycles):
-        i = 0
         prevTerrains = []
         while self.cycle() not in prevTerrains:
             prevTerrains.append([x.copy() for x in self.terrain])
-            i += 1
         s = prevTerrains.index(self.terrain)
         if cycles - 1 < s:
-            return prevTerrains[cycles]
-        period = i - s
-        print(s, period, cycles)
-        print([TerrainLoadAnalyser.calculateLoad(x) for x in prevTerrains[-period:]])
-        return prevTerrains[s + ((cycles - s) % period)]
+            return prevTerrains[cycles - 1]
+        #print(s, period, cycles)
+        #print([TerrainLoadAnalyser.calculateLoad(x) for x in prevTerrains[-period:]])
+        return prevTerrains[s + ((cycles - s - 1) % (len(prevTerrains) - s))]
 
     def cycle(self):
         for direction in CYCLE:
